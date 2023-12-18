@@ -1,0 +1,90 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body {
+    font-family: 'Sriracha', cursive;
+}
+
+@layer components {
+    /* App.jsx */
+    .background-main {
+        @apply top-0 fixed w-full h-full object-cover;
+    }
+    /* Header.jsx */
+    .header-style {
+        @apply container mx-auto;
+    }
+    .logo-box-style {
+        @apply mx-auto text-center;
+    }
+    .hero-text {
+        @apply text-4xl inline-block mt-14;
+    }
+    .arrow-hero {
+        @apply inline-block text-4xl mx-3 mb-1;
+    }
+    /* SearchForm.jsx */
+    .form-group {
+        @apply sm:w-4/5 md:w-3/5 lg:w-1/2 mx-auto flex my-5;
+    }
+    .input-style {
+        @apply px-4 focus:outline-none focus:bg-gray-400/30 w-full py-2 bg-gray-300/40 shadow-md shadow-blue-200/40 rounded-l-lg;
+    }
+    .search-btn {
+        @apply bg-white/100 px-4 py-2 rounded-r-lg shadow-md shadow-blue-200/40 hover:bg-slate-100 hover:transition-colors disabled:bg-white/50 disabled:cursor-default hover:cursor-pointer;
+    }
+    /* Images.jsx */
+    .image-box {
+        @apply sm:w-3/4 md:w-4/5 lg:w-1/2 mx-auto;
+    }
+    .display-text-search {
+        @apply mx-3 text-pink-500;
+    }
+    .display-main {
+        @apply grid md:grid-cols-3 my-7 gap-2 sm:grid-cols-2;
+    }
+    /* Img.jsx */
+    .img-item {
+        @apply h-72 object-cover w-full shadow-xl shadow-slate-300/50 rounded-md transition hover:-translate-y-6;
+    }
+    /* Sekeleton */
+    .sekeleton-item {
+        @apply w-full h-72 bg-white/40 rounded-md;
+    }
+    /* NotFound.jsx */
+    .notfound-page {
+        @apply  col-span-12 mx-36 text-center;
+    }
+    .ayame-chibi {
+        @apply  w-1/2  mx-auto my-3;
+    }
+    /* Footer.jsx */
+    .footer {
+        @apply text-center bg-white/60 py-3 shadow-inner shadow-gray-300 mt-10;
+    }
+    .arrow-footer {
+        @apply inline-block text-lg mx-3;
+    }
+    /* ChangePage.jsx */
+    .change-page-menu-box {
+        @apply flex justify-center my-10;
+    }
+    .change-page-arrow {
+        @apply mx-2 text-3xl hover:cursor-pointer hover:text-white;
+    }
+    
+     /*! < sm (< 640) */
+     @media (max-width: 640px){
+        .display-main {
+          @apply grid-cols-2 px-2;
+        }
+        
+        .form-group {
+            @apply px-5
+        }
+      }
+}
+
+
